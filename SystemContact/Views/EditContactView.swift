@@ -8,7 +8,6 @@ struct EditContactView: View {
     
     @State private var editContact: ContactViewModel
     @State private var showPhotoPicker = false
-    //@State private var showCalendar = false
     @State private var showDeleteConfirmation = false
     
     init(contact: Binding<ContactViewModel>, showEditView: Binding<Bool>, operation: Operation = .edit) {
@@ -48,10 +47,6 @@ struct EditContactView: View {
                     DeleteSection
                 }
             }
-            
-            //if showCalendar {
-                
-            //}
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
@@ -78,6 +73,7 @@ struct EditContactView: View {
                 showDeleteConfirmation = true
             }, label: {
                 Label("Delete This Contact", systemImage: "trash")
+                    .foregroundColor(.red)
             })
                 .frame(maxWidth: .infinity, alignment: .center)
                 .listRowBackground(Color(UIColor.systemGroupedBackground))

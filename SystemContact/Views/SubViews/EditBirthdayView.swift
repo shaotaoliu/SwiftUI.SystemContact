@@ -5,25 +5,27 @@ struct EditBirthdayView: View {
     @State private var showCalendar = false
     
     var body: some View {
-        HStack {
-            TextField("Birthday", text: $birthday)
-                .disabled(true)
-            
-            Button(action: {
-                showCalendar = true
-            }, label: {
-                Image(systemName: "calendar")
-            })
-                .sheet(isPresented: $showCalendar, content: {
-                    SelectDateView(dateString: $birthday)
+        Section("Birthday") {
+            HStack {
+                TextField("Birthday", text: $birthday)
+                    .disabled(true)
+                
+                Button(action: {
+                    showCalendar = true
+                }, label: {
+                    Image(systemName: "calendar")
                 })
-            
-            Button(action: {
-                birthday = ""
-            }, label: {
-                Image(systemName: "xmark.circle")
-            })
-                .buttonStyle(.borderless)
+                    .sheet(isPresented: $showCalendar, content: {
+                        SelectDateView(dateString: $birthday)
+                    })
+                
+                Button(action: {
+                    birthday = ""
+                }, label: {
+                    Image(systemName: "xmark.circle")
+                })
+                    .buttonStyle(.borderless)
+            }
         }
     }
 }

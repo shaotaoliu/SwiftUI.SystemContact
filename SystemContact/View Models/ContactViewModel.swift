@@ -20,6 +20,8 @@ struct ContactViewModel {
     
     var fullName: String {
         middleName.isEmpty ? "\(firstName) \(lastName)" : "\(firstName) \(middleName) \(lastName)"
+        
+        // CNContactFormatter.string(from: self, style: .fullName)
     }
     
     init() {}

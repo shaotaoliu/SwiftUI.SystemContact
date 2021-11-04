@@ -65,6 +65,7 @@ struct AddressDetailViewModel {
             address = address.isEmpty ? country : "\(address)\n\(country)"
         }
         
+        // CNPostalAddressFormatter().string(from: homeAddress)
         return address
     }
 }
