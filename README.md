@@ -49,4 +49,4 @@ To make it work better, I create my own picker.
 
 ![image](https://user-images.githubusercontent.com/15805568/140269400-9d66fcad-77fe-4dc4-9d98-4497ad7396f7.png)
 
-
+TODO: Should use the structure of SwiftUI.ItemList2 which is better.
