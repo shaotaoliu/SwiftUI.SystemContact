@@ -3,11 +3,9 @@ import SwiftUI
 struct ContactView: View {
     @State private var showEditView = false
     @State private var contact: ContactViewModel
-    var identifier: String
     
     init(identifier: String) {
         contact = Store.shared.fetchOne(identifier: identifier)!
-        self.identifier = identifier
     }
     
     var body: some View {
